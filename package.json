@@ -1,0 +1,12 @@
+{
+  "name": "gioco-dadi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Non sò ancora fare i test\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

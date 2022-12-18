@@ -1,0 +1,293 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.n-display {
+    display: none
+}
+button {
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    border: solid 1px black;
+    background-color: rgb(33, 33, 33);
+    color: white;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+body {
+    background-color: black;
+    color: white;
+}
+
+.container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+.my-logo {
+    position: absolute;
+    width: 25px;
+    right: 1rem;
+    bottom: 1rem;
+    z-index: 1;
+    cursor: pointer;
+}
+.left, .right {
+    width: 50%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+/* LEFT */
+.start {
+    width: 60%;
+    text-align: center;
+}
+.left .text {
+    font-size: 1.2rem;
+}
+.left .example {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+}
+.example img {
+    max-width: 250px;
+    width: 60%;
+    margin-left: 1rem;
+}
+.data-collector {
+    width: 100%;
+    padding: 1rem;
+    margin-top: 3rem;
+    display: flex;
+}
+.data-collector input {
+    background-color: rgb(22, 22, 22);
+    border: none;
+    border-bottom: solid 1px gray;
+    border-radius: 5px;
+    margin-right: 1rem;
+    padding: 0 0.5rem;
+    color: white;
+    flex-grow: 1;
+}
+
+
+
+
+
+
+.running {
+    height: 100%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.to-find {
+    position: absolute;
+    padding-top: 2rem;
+}
+#numbersToFind em {
+    font-size: 1.4rem;
+    margin-left: 1rem;
+}
+
+.squares {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 50%;
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
+.s-left, .s-right {
+    height: 70px;
+    width: 70px;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.s-left {
+    background-color:  #48d8ff;
+}
+.s-right {
+    background-color:  #ff9086;
+}
+
+.result {
+    position: absolute;
+    /* bottom: -4.3rem; */
+    top: 110%;
+    font-size: 1.5rem;
+    opacity: 0;
+    transition: 300ms opacity ease;
+    text-align: center;
+}
+.result p {
+    position: relative;
+    bottom: 0;
+}
+
+
+.controls {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-bottom: 2rem;
+}
+.controls:first-child {
+    opacity: 0;
+    transition: 300ms opacity ease;
+}
+
+
+
+
+/* RIGTH */
+
+.dice-logo {
+    width: 60%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    bottom: 3rem;
+}
+.dice-logo .text {
+    position: absolute;
+    padding: 1rem;
+    letter-spacing: 1rem;
+    text-align: center;
+}
+.dice-logo .text::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: black;
+    opacity: 50%;
+    border-radius: 10px;
+    z-index: 0;
+}
+.dice-logo .text h1 {
+    position: relative;
+    z-index: 1;
+}
+.credits {
+    width: 60%;
+    text-align: right;
+}
+
+
+
+
+
+
+
+
+
+/* MEDIA */
+@media(max-width: 1450px) {
+    .left {
+        width: 60%;
+    }
+    .right{
+        width: 40%;
+    }
+    .start {
+        width: 80%;
+    }
+}
+@media(max-width: 720px) {
+    .container {
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .my-logo {
+        bottom: unset;
+        right: unset;
+        top: 1rem;
+        left: 1rem;
+    }
+    .dice-logo {
+        bottom: 0;
+    }
+    .left {
+        width: 100%;
+        height: 400px;
+    }
+    .left .start {
+        width: 80%;
+    }
+
+    .running {
+        display: flex;
+        justify-content: center;
+    }
+    .running .to-find {
+        padding-top: 0;
+        top: 0;
+    }
+    .squares {
+        height: 45%;
+    }
+    .result {
+        top: 115%;
+    }
+    .controls {
+        height: 55%;
+        padding-bottom: 0.5rem;
+        flex-direction: row;
+    }
+    .controls button:last-child {
+        margin-left: 1rem;
+    }
+
+
+    .right {
+        height: 350px;
+        width: 80%;
+        margin: 3rem 0;
+    }
+}
+
+@media(max-width: 500px) {
+    :root {
+        font-size: 14px;
+    }
+    .right {
+        width: 100%;
+    }
+    .dice-logo {
+        width: 70%;
+    }
+}
+
+@media(max-width: 300px) {
+
+}
