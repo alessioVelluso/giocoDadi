@@ -1,3 +1,7 @@
+const getRandomNumber = (min, max) => {
+    return Math.floor(Math.random() * (max-min) + min)
+}
+
 const giocoDadi = (primoNumero, secondNumero) => {
     var d1, d2, sum, tentativi = 0;
     do {
