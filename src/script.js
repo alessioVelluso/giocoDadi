@@ -154,7 +154,7 @@ rollButton.addEventListener('click', () => {
         return;
     }; //When user use alphabetical char
     specialChar.forEach(char => {
-        if (inputData.includes(char)) {
+        if (modifiedString.includes(char)) {
             alert('Only commas please ;)');
             numbersInput.value = '';
             blocked = true;
